@@ -16,6 +16,8 @@ Capistrano::Configuration.class_eval do
   alias_method :execute_task, :execute_task_with_benchmarking
 end
 
-task :benchmark do
-  set :benchmark, true
+Capistrano::Configuration.instance.load do
+  task :benchmark do
+    set :benchmark, true
+  end
 end
