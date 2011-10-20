@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "capistrano-benchmark"
   gem.homepage = "http://github.com/technicalpickles/capistrano-benchmark"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Benchmark capistrano-tasks}
+  gem.description = %Q{Benchchmark cpaistrano-tasks like whoa}
   gem.email = "josh@technicalpickles.com"
   gem.authors = ["Josh Nichols"]
   gem.version = "0.0.1"
