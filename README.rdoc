@@ -1,6 +1,40 @@
 = capistrano-benchmark
 
-Description goes here.
+Getting more timing data about your capistrano-tasks. Out of the box, capistrano does include some timing data, particularly for local and remote commands, but not for tasks as a whole.
+
+capistrano-benchmark aims to provide a quick and dirty way to do this.
+
+== Installation
+
+You know the drill:
+
+    gem install capistrano-benchmark
+
+== Setup
+
+You can either set this up on a per project basis, or globally on a system.
+
+  # Project-specific -- config/deploy.rb
+  require 'capistrano-benchmark'
+
+  # Global system -- ~/.caprc
+  require 'capistrano-benchmark'
+
+Timing data isn't showed by default, and respects the ':benchmark' variable. There's a convience task for toggling this:
+
+  cap production benchmark deploy
+
+If you want this to happen always, you can set this variable yourself:
+
+  # config/deploy.rb
+  set :benchmark, true
+
+
+== Implementation notes
+
+`apistrano-benchmark works by alias chaining Capistrano::Configuration's execute_task to use ruby's built in `Benchmark` to time how long a real task works. Quick and dirty, but it gets the job done.
+
+This is the same pattern as rails's alias\_method\_chain, so ideally this wouldn't really interfer with anything.
 
 == Contributing to capistrano-benchmark
  
@@ -14,6 +48,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Josh Nichols. See LICENSE.txt for
-further details.
-
+Copyright (c) 2011 Josh Nichols. See LICENSE.txt for further details.
