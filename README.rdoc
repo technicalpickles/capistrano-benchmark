@@ -29,6 +29,10 @@ If you want this to happen always, you can set this variable yourself:
   # config/deploy.rb
   set :benchmark, true
 
+If you want to see a summarized benchmark report printed at the end:
+
+  # config/deploy.rb
+  after "deploy", "benchmark:report"
 
 == Implementation notes
 
