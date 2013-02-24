@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{capistrano-benchmark}
-  s.version = "0.0.1"
+  s.name = "capistrano-benchmark"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josh Nichols"]
-  s.date = %q{2011-10-19}
-  s.description = %q{Benchchmark cpaistrano-tasks like whoa}
-  s.email = %q{josh@technicalpickles.com}
+  s.date = "2013-02-24"
+  s.description = "Benchchmark cpaistrano-tasks like whoa"
+  s.email = "josh@technicalpickles.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -24,15 +24,16 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "capistrano-benchmark.gemspec",
     "lib/capistrano-benchmark.rb",
     "spec/capistrano-benchmark_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/technicalpickles/capistrano-benchmark}
+  s.homepage = "http://github.com/technicalpickles/capistrano-benchmark"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.4.2}
-  s.summary = %q{Benchmark capistrano-tasks}
+  s.rubygems_version = "1.8.23"
+  s.summary = "Benchmark capistrano-tasks"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
