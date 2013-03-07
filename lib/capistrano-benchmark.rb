@@ -35,8 +35,8 @@ Capistrano::Configuration.instance.load do
       max = benchmarks.collect{|x| x[0]}.max_by{|a| a.length}.length
       report_block = lambda do |data|
         name,took = data
-        mins = '%.0f' % (took / 60)
-        secs = '%.0f' % (took % 60)
+        mins = '%d' % (took / 60)
+        secs = '%d' % (took % 60)
         puts "  %-#{max}s : %2s mins and %2s secs" % [name,mins,secs]
       end
 
