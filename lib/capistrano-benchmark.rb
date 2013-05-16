@@ -1,13 +1,12 @@
 require 'benchmark'
 Capistrano::Configuration.class_eval do
-  @@benchmarks = []
   def execute_task_with_benchmarking(task)
     if fetch(:benchmark, false)
       name = task.fully_qualified_name
       realtime = Benchmark.realtime do
         execute_task_without_benchmarking(task)
       end
-      @@benchmarks << [name,realtime]
+      self.class.benchmarks << [name,realtime]
 
       logger.debug "Finished #{name} in #{realtime}"
     else
@@ -16,7 +15,7 @@ Capistrano::Configuration.class_eval do
   end
 
   def self.benchmarks
-    @@benchmarks
+    @benchmarks ||= []
   end
 
   alias_method :execute_task_without_benchmarking, :execute_task
