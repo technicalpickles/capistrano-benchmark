@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "capistrano-benchmark"
-  s.version = "0.0.4"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josh Nichols"]
-  s.date = "2013-04-04"
+  s.date = "2013-05-17"
   s.description = "Benchchmark cpaistrano-tasks like whoa"
   s.email = "josh@technicalpickles.com"
   s.extra_rdoc_files = [
