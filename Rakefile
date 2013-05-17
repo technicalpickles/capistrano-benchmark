@@ -21,7 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Benchchmark cpaistrano-tasks like whoa}
   gem.email = "josh@technicalpickles.com"
   gem.authors = ["Josh Nichols"]
-  gem.version = "0.0.3"
+  gem.version = "0.0.4"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
